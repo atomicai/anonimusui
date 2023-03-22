@@ -1,7 +1,3 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
-export const App: FC = () => (
-    <div>
-      App
-    </div>
-  )
+export const App: FC = () => <div>App</div>;
