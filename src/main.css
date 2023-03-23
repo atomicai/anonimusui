@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --bg-color: #12071f;
-}
-
-@layer base {
-  body {
-    background-color: var(--bg-color);
-  }
-}

@@ -12,8 +12,14 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@heroicons/react": "^2.0.16",
+    "@mui/material": "^5.11.14",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.9",
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
