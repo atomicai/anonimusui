@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { FileUploadResponse } from '../types';
+import { DepersonalizationResult, FileUploadResponse, SendParamsResponse } from '../types';
 
 export class ApiService {
   protected readonly axios = axios.create({
@@ -10,13 +10,18 @@ export class ApiService {
   uploadFile(file: File) {
     const data = new FormData();
     data.append('file', file);
-
-    console.log(import.meta.env.DEV);
-
     return this.axios
       .post<FileUploadResponse>('/uploading', data, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       })
       .then((res) => res.data);
+  }
+
+  sendParams(text: string, email: string | null) {
+    return this.axios.post<SendParamsResponse>('/iloading', { text, email }).then((res) => res.data);
+  }
+
+  getResult() {
+    return this.axios.get<DepersonalizationResult>('/viewing').then((res) => res.data);
   }
 }
