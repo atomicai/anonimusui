@@ -15,3 +15,7 @@ It is expected that backend is located at http://localhost:5000. Otherwise appro
 ## Build
 
     yarn build
+
+## data flow
+
+![dataflow](./doc/dataflow.png)
